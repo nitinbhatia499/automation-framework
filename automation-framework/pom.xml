@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-   <groupId>io.github.nitinbhatia</groupId>
+   <groupId>io.github.nitinbhatia499</groupId>
     <artifactId>bddframework-parent</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
       <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>automation-framework</artifactId>
@@ -117,7 +117,7 @@
     <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
-        <!--<version>7.10.2</version>-->
+        <version>${testng.version}</version>
        
     </dependency>
 
@@ -125,33 +125,33 @@
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-       <!-- <version>4.23.0</version>-->
+        <version>${selenium.version}</version>
     </dependency>
 
     <!-- ✅ WebDriver Manager (auto driver binaries) -->
     <dependency>
         <groupId>io.github.bonigarcia</groupId>
         <artifactId>webdrivermanager</artifactId>
-
+        <version>${webdrivermanager.version}</version>
     </dependency>
 
     <!-- ✅ Logging (Log4j2) -->
     <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-core</artifactId>
-
+        <version>${log4j.version}</version>
     </dependency>
     <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-api</artifactId>
-        
+        <version>${log4j.version}</version>
     </dependency>
 
     <!-- ✅ Reporting (ExtentReports as example) -->
     <dependency>
         <groupId>com.aventstack</groupId>
         <artifactId>extentreports</artifactId>
-       
+        <version>${extent.version}</version>
     </dependency>
 </dependencies>
 
