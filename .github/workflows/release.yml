@@ -31,8 +31,24 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      - name: Publish
-        run: mvn -B -pl automation-framework -am clean deploy
+     # ============================================
+      # STEP 1: Deploy Parent POM First
+      # ============================================
+      - name: Deploy Parent POM
+        run: |
+          cd bddframework-parent
+          mvn -B deploy
+        env:
+          MAVEN_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
+
+      # ============================================
+      # STEP 2: Deploy Automation Framework
+      # ============================================
+      - name: Deploy Automation Framework
+        run: |
+          cd automation-framework
+          mvn -B deploy
         env:
           MAVEN_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
