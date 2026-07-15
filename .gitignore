@@ -1,0 +1,3 @@
+# Project exclude paths
+/automation-framework/target/
+/automation-tests/target/

@@ -1,0 +1,155 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+   <groupId>io.github.nitinbhatia</groupId>
+    <artifactId>bddframework-parent</artifactId>
+    <version>1.0.0</version>
+      <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>automation-framework</artifactId>
+  <packaging>jar</packaging>
+  
+    <name>Automation Framework</name>
+    <description>Reusable Selenium TestNG Automation Framework</description>
+    <url>https://github.com/nitinbhatia/automation-framework</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>nitinbhatia</id>
+            <name>Nitin Bhatia</name>
+            <email>your-email@gmail.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>
+            scm:git:https://github.com/YOUR_GITHUB_USERNAME/automation-framework.git
+        </connection>
+
+        <developerConnection>
+            scm:git:git@github.com:YOUR_GITHUB_USERNAME/automation-framework.git
+        </developerConnection>
+
+        <url>
+            https://github.com/YOUR_GITHUB_USERNAME/automation-framework
+        </url>
+
+        <tag>HEAD</tag>
+    </scm>
+    <!-- Plugins for Maven Central publishing -->
+    <build>
+    <plugins>
+    <!-- Source JAR -->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>${maven.source.plugin.version}</version>
+        <executions>
+            <execution>
+                <id>attach-sources</id>
+                <goals>
+                    <goal>jar-no-fork</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+
+    <!-- Javadoc JAR -->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${maven.javadoc.plugin.version}</version>
+        <executions>
+            <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                    <goal>jar</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+        <!-- GPG Signing (required by Maven Central) -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven.gpg.plugin.version}</version>
+            <executions>
+                <execution>
+                    <id>sign-artifacts</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>sign</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>${central.publishing.plugin.version}</version>
+            <extensions>true</extensions>
+            <configuration>
+
+                <publishingServerId>central</publishingServerId>
+                <autoPublish>true</autoPublish>
+                <failOnError>false</failOnError>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+        </plugin>
+
+    </plugins>
+    </build>
+
+
+    <dependencies>
+    <!-- ✅ TestNG for testing and listeners -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <!--<version>7.10.2</version>-->
+       
+    </dependency>
+
+    <!-- ✅ Selenium WebDriver -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+       <!-- <version>4.23.0</version>-->
+    </dependency>
+
+    <!-- ✅ WebDriver Manager (auto driver binaries) -->
+    <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+
+    </dependency>
+
+    <!-- ✅ Logging (Log4j2) -->
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        
+    </dependency>
+
+    <!-- ✅ Reporting (ExtentReports as example) -->
+    <dependency>
+        <groupId>com.aventstack</groupId>
+        <artifactId>extentreports</artifactId>
+       
+    </dependency>
+</dependencies>
+
+
+</project>

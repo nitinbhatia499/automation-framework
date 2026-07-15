@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BDD Framework Suite">
+    <listeners>
+        <listener class-name="io.github.nitinbhatia.framework.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Sample Tests">
+        <classes>
+           <class name="io.github.nitinbhatia.framework.tests.SampleUnitTest"/>
+        </classes>
+    </test>
+</suite>

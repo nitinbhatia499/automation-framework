@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.nitinbhatia</groupId>
+
+  <artifactId>bddframework-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+    <name>BDD Framework Parent</name>
+    <description>
+        Parent project for reusable automation framework.
+    </description>
+  <modules>
+  	<module>automation-framework</module>
+  	<module>automation-tests</module>
+  </modules>
+  <properties>
+
+    <java.version>11</java.version>
+
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <selenium.version>4.23.0</selenium.version>
+    <restassured.version>5.4.0</restassured.version>
+    <testng.version>7.10.2</testng.version>
+    <webdrivermanager.version>6.1.0</webdrivermanager.version>
+    <jackson.version>2.17.1</jackson.version>
+    <slf4j.version>2.0.13</slf4j.version>
+    <log4j.version>2.25.4</log4j.version>
+    <extent.version>5.1.1</extent.version>
+
+      <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+      <maven.source.plugin.version>3.3.1</maven.source.plugin.version>
+      <maven.javadoc.plugin.version>3.8.0</maven.javadoc.plugin.version>
+      <maven.gpg.plugin.version>3.2.7</maven.gpg.plugin.version>
+      <central.publishing.plugin.version>0.7.0</central.publishing.plugin.version>
+
+</properties>
+<dependencyManagement>
+        <dependencies>
+            <!-- TestNG -->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+            </dependency>
+
+            <!-- Selenium -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${selenium.version}</version>
+            </dependency>
+
+            <!-- RestAssured -->
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>${restassured.version}</version>
+            </dependency>
+
+            <!-- WebDriverManager -->
+            <dependency>
+                <groupId>io.github.bonigarcia</groupId>
+                <artifactId>webdrivermanager</artifactId>
+                <version>${webdrivermanager.version}</version>
+            </dependency>
+
+            <!-- Jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <!-- SLF4J -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- Log4j -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+    <dependency>
+        <groupId>com.aventstack</groupId>
+        <artifactId>extentreports</artifactId>
+        <version>${extent.version}</version>
+    </dependency>
+        </dependencies>
+    </dependencyManagement>
+     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
