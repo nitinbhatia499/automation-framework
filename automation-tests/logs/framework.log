@@ -1,0 +1,24 @@
+2026-07-13 19:14:10 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Starting test with browser: chrome
+2026-07-13 19:14:25 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Navigated to: https://www.google.com
+2026-07-13 19:14:26 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Verifying Google title...
+2026-07-13 19:14:26 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Google title verified successfully.
+2026-07-13 19:14:26 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Test passed: verifyGoogleTitle
+2026-07-13 19:14:29 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Browser closed.
+2026-07-13 19:17:35 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Starting test with browser: chrome
+2026-07-13 19:17:41 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Navigated to: https://www.google.com
+2026-07-13 19:17:41 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Verifying Google title...
+2026-07-13 19:17:43 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Google title verified successfully.
+2026-07-13 19:17:43 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Test passed: verifyGoogleTitle
+2026-07-13 19:17:45 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Browser closed.
+2026-07-14 13:30:39 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Starting test with browser: chrome
+2026-07-14 13:30:48 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Navigated to: https://www.google.com
+2026-07-14 13:30:48 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Verifying Google title...
+2026-07-14 13:30:50 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Google title verified successfully.
+2026-07-14 13:30:50 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Test passed: verifyGoogleTitle
+2026-07-14 13:30:51 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Browser closed.
+2026-07-14 14:39:54 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Starting test with browser: chrome
+2026-07-14 14:40:00 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Navigated to: https://www.google.com
+2026-07-14 14:40:00 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Verifying Google title...
+2026-07-14 14:40:01 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Google title verified successfully.
+2026-07-14 14:40:01 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Test passed: verifyGoogleTitle
+2026-07-14 14:40:02 INFO  io.github.nitinbhatia.framework.logger.LoggerUtil - Browser closed.
