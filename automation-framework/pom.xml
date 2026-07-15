@@ -8,6 +8,9 @@
   </parent>
   <artifactId>automation-framework</artifactId>
   <packaging>jar</packaging>
+    <properties>
+        <maven.deploy.skip>false</maven.deploy.skip>
+    </properties>
   
     <name>Automation Framework</name>
     <description>Reusable Selenium TestNG Automation Framework</description>

@@ -14,7 +14,7 @@
   	<module>automation-tests</module>
   </modules>
   <properties>
-
+      <maven.deploy.skip>true</maven.deploy.skip>
     <java.version>11</java.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
