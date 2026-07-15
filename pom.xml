@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.nitinbhatia499</groupId>
   <artifactId>bddframework-parent</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>pom</packaging>
     <name>BDD Framework Parent</name>
     <description>

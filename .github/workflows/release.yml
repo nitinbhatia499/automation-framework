@@ -20,7 +20,8 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '21'
+          java-version: '11'
+          cache: maven
           server-id: central
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
@@ -31,23 +32,14 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-     # ============================================
-      # STEP 1: Deploy Parent POM First
-      # ============================================
-      - name: Deploy Parent POM
-        run: |
-          cd bddframework-parent
-          mvn -B deploy
-        env:
-          MAVEN_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
+
 
       # ============================================
-      # STEP 2: Deploy Automation Framework
+      # STEP 1: Deploy Automation Framework
       # ============================================
       - name: Deploy Automation Framework
-        run: |
-          cd automation-framework
+        working-directory: ./automation-framework
+        run:
           mvn -B deploy
         env:
           MAVEN_USERNAME: ${{ secrets.CENTRAL_USERNAME }}

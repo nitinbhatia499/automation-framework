@@ -4,13 +4,14 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
+ <!-- <parent>
     <groupId>io.github.nitinbhatia499</groupId>
     <artifactId>bddframework-parent</artifactId>
     <version>1.0.6</version>
-  </parent>
-
+  </parent>-->
+    <groupId>io.github.nitinbhatia499</groupId>
   <artifactId>automation-tests</artifactId>
+    <version>1.0.7</version>
   <packaging>jar</packaging>
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
@@ -20,12 +21,13 @@
     <dependency>
         <groupId>io.github.nitinbhatia499</groupId>
         <artifactId>automation-framework</artifactId>
-        <version>1.0.6</version>
+        <version>1.0.7</version>
     </dependency>
 
     <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
+        <version>7.10.2</version>
     </dependency>
 </dependencies>
   <build>
