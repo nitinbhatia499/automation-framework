@@ -11,7 +11,7 @@
   
     <name>Automation Framework</name>
     <description>Reusable Selenium TestNG Automation Framework</description>
-    <url>https://github.com/nitinbhatia/automation-framework</url>
+    <url>https://github.com/nitinbhatia499/automation-framework</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -20,22 +20,22 @@
     </licenses>
     <developers>
         <developer>
-            <id>nitinbhatia</id>
+            <id>nitinbhatia499</id>
             <name>Nitin Bhatia</name>
-            <email>your-email@gmail.com</email>
+            <email>nitinbhatia499@gmail.com</email>
         </developer>
     </developers>
     <scm>
         <connection>
-            scm:git:https://github.com/YOUR_GITHUB_USERNAME/automation-framework.git
+            scm:git:https://github.com/nitinbhatia499/automation-framework.git
         </connection>
 
         <developerConnection>
-            scm:git:git@github.com:YOUR_GITHUB_USERNAME/automation-framework.git
+            scm:git:git@github.com:nitinbhatia499/automation-framework.git
         </developerConnection>
 
         <url>
-            https://github.com/YOUR_GITHUB_USERNAME/automation-framework
+            https://github.com/nitinbhatia499/automation-framework
         </url>
 
         <tag>HEAD</tag>
@@ -63,6 +63,9 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>${maven.javadoc.plugin.version}</version>
+        <configuration>
+            <failOnError>false</failOnError>
+        </configuration>
         <executions>
             <execution>
                 <id>attach-javadocs</id>
@@ -93,10 +96,8 @@
             <version>${central.publishing.plugin.version}</version>
             <extensions>true</extensions>
             <configuration>
-
                 <publishingServerId>central</publishingServerId>
                 <autoPublish>true</autoPublish>
-                <failOnError>false</failOnError>
             </configuration>
         </plugin>
 
