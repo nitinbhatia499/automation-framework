@@ -1,28 +1,46 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.nitinbhatia499</groupId>
-
   <artifactId>bddframework-parent</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <packaging>pom</packaging>
     <name>BDD Framework Parent</name>
     <description>
         Parent project for reusable automation framework.
     </description>
+
   <modules>
   	<module>automation-framework</module>
   	<module>automation-tests</module>
   </modules>
+    <url>https://github.com/nitinbhatia499/automation-framework</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>nitinbhatia499</id>
+            <name>Nitin Bhatia</name>
+            <email>nitinbhatia499@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/nitinbhatia499/automation-framework.git</connection>
+        <developerConnection>scm:git:git@github.com:nitinbhatia499/automation-framework.git</developerConnection>
+        <url>https://github.com/nitinbhatia499/automation-framework</url>
+    </scm>
   <properties>
-      <maven.deploy.skip>true</maven.deploy.skip>
+      <maven.deploy.skip>false</maven.deploy.skip>
       <java.version>11</java.version>
-
       <maven.compiler.source>${java.version}</maven.compiler.source>
-
       <maven.compiler.target>${java.version}</maven.compiler.target>
-
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
       <selenium.version>4.23.0</selenium.version>
       <restassured.version>5.4.0</restassured.version>
       <testng.version>7.10.2</testng.version>
@@ -121,5 +139,27 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+         <plugins>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-gpg-plugin</artifactId>
+                 <version>${maven.gpg.plugin.version}</version>
+                 <executions>
+                     <execution>
+                         <id>sign-artifacts</id>
+                         <phase>verify</phase>
+                         <goals>
+                             <goal>sign</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+             </plugin>
+         </plugins>
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>central</id>
+            <url>https://central.sonatype.com/api/v1/publisher/deployments/download/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
